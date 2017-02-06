@@ -1,4 +1,5 @@
 # Supermonitoring
+### Standalone Supermonitoring extension package for Joomla! 2.5 - 3.6
 Monitor your website uptime with www.supermonitoring.com services - and have the reports displayed in your Joomla panel.
 
 The extension integrates Super Monitoring responsive interface into Joomla admin panel, enabling you to view reports and configure services without the need to leave your CMS and log in manually to the external application.
@@ -15,3 +16,7 @@ Super Monitoring service main features:
 - downtime history (PDF reports, data export).
 
 Available in English, Spanish and Polish.
+
+# Changelog
+#### 1.0.6 - released 2017-02-06
+- Change the URL of the XML file which contains that extension's individual update definitions manifest.xml
