@@ -10,14 +10,14 @@
   <authorUrl>http://www.siteimpulse.com/</authorUrl>
   <copyright>Copyright (C) 2015 SITEIMPULSE</copyright>
   <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <description>Monitor your website uptime with www.supermonitoring.com services - and have the reports displayed in your Joomla panel.</description>
     
   <!-- Runs on install/uninstall/update; New from 2.5 -->
   <scriptfile>supermonitoring.script.php</scriptfile> 
   
   <updateservers>
-    <server type="extension" priority="2" name="Supermonitoring Update Site">http://extensions.stronazen.pl/joomla/supermonitoring.xml</server>
+    <server type="extension" priority="2" name="Supermonitoring Update Site">http://githubusercontent.stronazen.pl/joomla-extensions/master/manifest.xml</server>
   </updateservers>
 
   <install> <!-- Runs on install -->
