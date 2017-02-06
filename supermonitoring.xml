@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component"
+           version="2.5.0"
+           method="upgrade">
+
+  <name>COM_SUPERMONITORING</name>
+  <creationDate>January 2015</creationDate>
+  <author>SITEIMPULSE</author>
+  <authorEmail></authorEmail>
+  <authorUrl>http://www.siteimpulse.com/</authorUrl>
+  <copyright>Copyright (C) 2015 SITEIMPULSE</copyright>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <version>1.0.5</version>
+  <description>Monitor your website uptime with www.supermonitoring.com services - and have the reports displayed in your Joomla panel.</description>
+    
+  <!-- Runs on install/uninstall/update; New from 2.5 -->
+  <scriptfile>supermonitoring.script.php</scriptfile> 
+  
+  <updateservers>
+    <server type="extension" priority="2" name="Supermonitoring Update Site">http://extensions.stronazen.pl/joomla/supermonitoring.xml</server>
+  </updateservers>
+
+  <install> <!-- Runs on install -->
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall> <!-- Runs on uninstall -->
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+  <update> <!-- Runs on update; New in 2.5 -->
+    <schemas>
+      <schemapath type="mysql">sql/updates/mysql</schemapath>
+    </schemas>
+  </update>
+
+  <administration>
+    <!-- Administration Menu Section -->
+    <menu>COM_SUPERMONITORING_MENU</menu>
+    <submenu>
+      <menu alt="COM_SUPERMONITORING_SUBMENU_SERVICES" link="option=com_supermonitoring&amp;view=services">COM_SUPERMONITORING_SUBMENU_SERVICES</menu>
+      <menu alt="COM_SUPERMONITORING_SUBMENU_SETTING" link="option=com_supermonitoring&amp;view=setting">COM_SUPERMONITORING_SUBMENU_SETTING</menu>
+      <menu alt="COM_SUPERMONITORING_SUBMENU_CONTACTS" link="option=com_supermonitoring&amp;view=contacts">COM_SUPERMONITORING_SUBMENU_CONTACTS</menu>
+      <menu alt="COM_SUPERMONITORING_SUBMENU_SETTINGS" link="option=com_supermonitoring">COM_SUPERMONITORING_SUBMENU_SETTINGS</menu>
+    </submenu>
+    
+    <files folder="admin">
+      <filename>index.html</filename>
+      <filename>supermonitoring.php</filename>
+      <filename>controller.php</filename>
+      <folder>sql</folder>
+      <folder>tables</folder>
+      <folder>models</folder>
+      <folder>views</folder>
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <folder>assets</folder>
+    </files>
+                
+    <languages>
+      <language tag="pl-PL">admin/language/pl-PL/pl-PL.com_supermonitoring.ini</language>
+      <language tag="pl-PL">admin/language/pl-PL/pl-PL.com_supermonitoring.sys.ini</language>
+            
+      <language tag="en-GB">admin/language/en-GB/en-GB.com_supermonitoring.ini</language>
+      <language tag="en-GB">admin/language/en-GB/en-GB.com_supermonitoring.sys.ini</language>
+			
+      <language tag="en-US">admin/language/en-US/en-US.com_supermonitoring.ini</language>
+      <language tag="en-US">admin/language/en-US/en-US.com_supermonitoring.sys.ini</language>
+            
+      <language tag="es-ES">admin/language/es-ES/es-ES.com_supermonitoring.ini</language>
+      <language tag="es-ES">admin/language/es-ES/es-ES.com_supermonitoring.sys.ini</language>
+    </languages>
+  </administration>
+
+</extension>
